@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dev">
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <a class="btn btn-success" data-bs-toggle="modal" href="#modal-add">Add Developer</a>
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Skill</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Photo</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-add">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Add Developer</h5>
+                </div>
+                <div class="modal-body">
+                    <form id="dev-add" action="#">
+                        <div class="form-group mb-2">
+                            <label for="">Name</label>
+                            <input id="name" type="text" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Email</label>
+                            <input id="email" type="email" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Phone</label>
+                            <input id="phone" type="text" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Photo Link</label>
+                            <input id="photo" type="text" class="form-control">
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="">Skill</label>
+                            <select class="form-control" name="" id="skill">
+                                <option value="">-select-</option>
+                            </select>
+                        </div>
+                        <div class="form-group mb-2">
+                            <input type="submit" data-bs-dismiss="modal" href="#modal-add"  class="btn btn-success w-100" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-view">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body" id="view_show">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-edit">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="dev-edit" action="#">
+                        <div class="form-group mb-2">
+                            <label for="">Name</label>
+                            <input id="ename" type="text" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input id="eid" type="hidden" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Email</label>
+                            <input id="eemail" type="email" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <label for="">Phone</label>
+                            <input id="ephone" type="text" class="form-control">
+                        </div>
+                        <div class="form-group mb-2">
+                            <img src="" id="eimg" alt="">
+                            <label for="">Photo Link</label>
+                            <input id="ephoto" type="text" class="form-control">
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="">Skill</label>
+                            <input class="form-control" name="" id="eskill">
+                        </div>
+                        <div class="form-group mb-2">
+                            <input type="submit" data-bs-dismiss="modal" href="#modal-edit"  class="btn btn-success w-100" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal-delete">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4>Are you sure?</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aperiam saepe vitae animi quasi modi nulla sunt autem expedita et.</p>
+                    <div class="btns d-flex justify-content-end">
+                        <div data-bs-dismiss="modal" class="btn btn-primary">Close</div> &nbsp; &nbsp;
+                        <div data-bs-dismiss="modal" delid="" id="dev-dele" class="btn btn-danger">Delete</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-------- Axios --------->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Bootstrap JavaScript file -->
+    <script src="./bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript file-->
+    <script src="function.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+/* Start CSS */
+.dev tbody td img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
